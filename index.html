@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Matemasie&family=Moderustic:wght@300..800&family=Noto+Sans+TC:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="custom-container">
+            <h2>Lista de Tareas</h2>
+            <div class="form d-flex">
+                <input type="text" class="form-control me-2" id="input" placeholder="Nueva tarea">
+                <button class="btn-custom btn" id="add" onclick="addTask()">Agregar</button>
+            </div>
+            <ul class="list-group" id="list-group">
+            </ul>
+        </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+    <script src="https://kit.fontawesome.com/dcc8499c7a.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

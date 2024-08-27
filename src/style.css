@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Moderustic", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+
+.container-fluid {
+    background-image: linear-gradient(32deg, #141d4f, #294e78, #3784a2, #40becf);
+    min-height: 100vh;
+    padding: 10px;
+}
+
+
+.custom-container {
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 20px 40px;
+    border-radius: 10px;
+}
+
+.form{
+    margin-bottom: 1rem;
+}
+
+.btn-custom{
+    background-color: #39a5b6;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover{
+    background-color: #2e8694;
+    color: white;
+    border: none;
+}
+
+
+
+
+.list-group-item {
+    padding: 1rem;
+    border: none;
+}
+
+
+.realized{
+    text-decoration: line-through;
+}
+
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-group-item i {
+    flex-shrink: 0;
+    cursor: pointer;
+ 
+}
+
+.text-content {
+    flex: 1; /* Permite que el texto ocupe el espacio disponible entre los íconos */
+    margin: 0 8px; /* Añade un pequeño margen entre el texto y los íconos */
+    white-space: wrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta cualquier texto que desborde */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es muy largo */
+}
