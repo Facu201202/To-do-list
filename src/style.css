@@ -8,7 +8,7 @@
     font-style: normal;
 }
 
-
+/* Full-width container with gradient background */
 
 .container-fluid {
     background-image: linear-gradient(32deg, #141d4f, #294e78, #3784a2, #40becf);
@@ -16,6 +16,7 @@
     padding: 10px;
 }
 
+/* Centered container with white background and rounded corners */
 
 .custom-container {
     max-width: 540px;
@@ -25,17 +26,20 @@
     border-radius: 10px;
 }
 
-.form{
+.form {
     margin-bottom: 1rem;
 }
 
-.btn-custom{
+
+/* Custom button styles */
+
+.btn-custom {
     background-color: #39a5b6;
     color: white;
     border: none;
 }
 
-.btn-custom:hover{
+.btn-custom:hover {
     background-color: #2e8694;
     color: white;
     border: none;
@@ -50,10 +54,8 @@
 }
 
 
-.realized{
-    text-decoration: line-through;
-}
 
+/* List group item styles */
 
 .list-group-item {
     display: flex;
@@ -62,16 +64,27 @@
     width: 100%;
 }
 
+
+/* Style for completed tasks */
+
+.realized {
+    text-decoration: line-through;
+}
+
+
+/* Icon styling within list items */
+
 .list-group-item i {
     flex-shrink: 0;
     cursor: pointer;
- 
+
 }
 
+/* Ensure text content is responsive */
+
 .text-content {
-    flex: 1; /* Permite que el texto ocupe el espacio disponible entre los íconos */
-    margin: 0 8px; /* Añade un pequeño margen entre el texto y los íconos */
-    white-space: wrap; /* Evita que el texto se divida en varias líneas */
-    overflow: hidden; /* Oculta cualquier texto que desborde */
-    text-overflow: ellipsis; /* Muestra puntos suspensivos si el texto es muy largo */
+    flex: 1;
+    margin: 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

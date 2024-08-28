@@ -2,7 +2,8 @@ const FormInput = document.getElementById("input") as HTMLInputElement;
 const listGroup = document.getElementById("list-group") as HTMLUListElement;
 
 
-//function to load the new task
+
+//function to add task to the DOM
 
 function addTask(): void {
     if (FormInput.value === '') {
@@ -14,6 +15,7 @@ function addTask(): void {
     }
 }
 
+// Function to create an HTML task element
 
 function newTask(text: string, status: boolean) {
     const li = document.createElement("li") as HTMLLIElement
@@ -62,8 +64,10 @@ function newTask(text: string, status: boolean) {
     FormInput.value = ''
 }
 
+
+//function for delete a task from DOM and localstorage
+
 function deleteTask(text: string): void {
-    console.log("newTasks")
     const tasks = getTask()
     const newTasks = tasks.filter(T => T.text !== text)
     
@@ -72,6 +76,9 @@ function deleteTask(text: string): void {
 
     listGroup.removeChild(liElement)
 }
+
+
+//toggle function to change the icons and the task status
 
 function checkButton(text: string, check: HTMLElement, span: HTMLSpanElement): void {
     if (span.classList.contains("realized")) {
@@ -86,10 +93,16 @@ function checkButton(text: string, check: HTMLElement, span: HTMLSpanElement): v
 }
 
 
+
+//Get array of tasks from localstorage
+
 function getTask(): { text: string, realized: boolean }[] {
     const tasks = localStorage.getItem("tasks");
     return tasks ? JSON.parse(tasks) : []
 }
+
+
+//Pushes a task into the tasks array and saves it to localStorage afterward
 
 function saveTask(text: string, realized: boolean): void {
     console.log(text)
@@ -105,6 +118,8 @@ function saveTask(text: string, realized: boolean): void {
 }
 
 
+//changes the task status
+
 function toggle(text: string): void {
     const tasks = getTask()
     const task = tasks.find(task => task.text === text)
@@ -115,6 +130,8 @@ function toggle(text: string): void {
     }
 }
 
+
+//Function to display the tasks in the DOM
 
 function showTask() {
     const tasks = getTask()
